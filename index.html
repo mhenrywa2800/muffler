@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>My Web App</title>
+
+  <!-- Connect to manifest -->
+  <link rel="manifest" href="manifest.json">
+
+  <meta name="theme-color" content="#000000">
+
+  <style>
+    body {
+      background: #111;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 80px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Your App Is Ready</h1>
+  <p>You can install this website as an app from your browser menu.</p>
+
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("service-worker.js");
+    }
+  </script>
+
+</body>
+</html>
